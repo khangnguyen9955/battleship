@@ -1,0 +1,94 @@
+
+
+
+
+// cu   function playGameSingle() {
+//         console.log(currentPlayer);
+//         if (isGameOver) return
+//         if (currentPlayer === 'user') {
+//             turnDisplay.innerHTML = 'Your turn'
+//             computerSquares.forEach(square => square.addEventListener('click',(e) =>{
+//                 if(currentPlayer === "computer") return false;
+//                 else revealSquare(square.classList)
+//             }))
+//         }
+//          if (currentPlayer === 'enemy') {
+//             turnDisplay.innerHTML = "Enemy's turn"
+//             setTimeout(enemyTurn, 2000);
+//         }
+//     }
+
+//    function enemyTurn(square) {
+//          if (gameMode==="singlePlayer") square = Math.floor(Math.random() * 100);
+//         console.log("square",square);
+//         console.log("usersquare", userSquares[square].classList);
+//         if (!userSquares[square].classList.contains('boom')) {
+//             console.log("vo day")
+//             if (userSquares[square].classList.contains('destroyer')) cpuDestroyerCount++
+//             if (userSquares[square].classList.contains('submarine')) cpuSubmarineCount++
+//             if (userSquares[square].classList.contains('cruiser')) cpuCruiserCount++
+//             if (userSquares[square].classList.contains('battleship')) cpuBattleshipCount++
+//             if (userSquares[square].classList.contains('carrier')) cpuCarrierCount++
+//         }
+//
+//         if(userSquares[square].classList.contains('boom') || userSquares[square].classList.contains('miss')){
+//             console.log("vo dayh")
+//             console.log(currentPlayer);
+//               return  playGameSingle();
+//         }
+//         else{
+//             if(userSquares[square].classList.contains('taken')){
+//                 console.log("vo dayh")
+//
+//                 userSquares[square].classList.add('boom');
+//                 checkForWins()
+//
+//                 return playGameSingle()
+//             }else{
+//                 console.log("vo dayh")
+//
+//                 userSquares[square].classList.add('miss');
+//                 currentPlayer="user"
+//                 return playGameSingle();
+//             }
+//
+//         }
+//         console.log("vo dayh")
+//
+//         currentPlayer='user';
+//         turnDisplay.innerHTML = "Your turn";
+//
+//     }
+// function revealSquare(classList) {
+//         const enemySquare = computerGrid.querySelector(`div[data-id='${shotFired}']`)
+//         console.log(enemySquare);
+//
+//         const obj = Object.values(classList);
+//         if (!enemySquare.classList.contains('boom') && currentPlayer==="user" && !isGameOver) {
+//             if (obj.includes('destroyer')) destroyerCount++
+//             if (obj.includes('submarine')) submarineCount++
+//             if (obj.includes('cruiser')) cruiserCount++
+//             if (obj.includes('battleship')) battleshipCount++
+//             if (obj.includes('carrier')) carrierCount++
+//         }
+//         if (obj.includes('boom') || obj.includes("miss")){
+//             currentPlayer="user";
+//         }
+//         else{
+//             if (obj.includes('taken')) {
+//                 enemySquare.classList.add('boom')
+//                 console.log("vo day");
+//             } else {
+//                 enemySquare.classList.add('miss')
+//                 console.log("vo day");
+//
+//                 currentPlayer = 'enemy';
+//
+//             }
+//         }
+//
+//        checkForWins()
+//         console.log("vo day");
+//
+//         if(gameMode==="singlePlayer") playGameSingle();
+//     }
